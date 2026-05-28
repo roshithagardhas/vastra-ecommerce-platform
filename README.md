@@ -1,22 +1,78 @@
 # Vastra E-Commerce Platform
 
-Full-stack e-commerce application built using React.js, Node.js, MySQL, and AWS.
+Cloud-hosted e-commerce platform built using Node.js, React.js, MySQL, AWS EC2, and Nginx with CI/CD deployment workflows.
 
 ## Features
-- Product listing and management
-- User authentication
-- Shopping cart functionality
-- REST API integration
-- CI/CD deployment workflow
+
+* User authentication and authorization
+* Product listing and management
+* Shopping cart functionality
+* Order management workflows
+* Admin dashboard support
+* Deployment automation workflows
+* Linux-based server deployment
+* Nginx reverse proxy configuration
 
 ## Technologies Used
-- React.js
-- Node.js
-- MySQL
-- AWS EC2
-- GitHub Actions
-- Linux
-- Nginx
 
-## Deployment
-Application deployment and CI/CD workflows managed using GitHub Actions and AWS EC2.
+### Frontend
+
+* React.js
+* HTML
+* CSS
+* JavaScript
+
+### Backend
+
+* Node.js
+* Express.js
+* MySQL
+
+### Cloud & DevOps
+
+* AWS EC2
+* GitHub Actions
+* Nginx
+* Linux
+* Docker
+
+## Deployment Workflow
+
+1. Application code pushed to GitHub
+2. GitHub Actions CI/CD pipeline triggered
+3. Backend deployment workflow executed
+4. Application deployed on AWS EC2
+5. Nginx configured as reverse proxy
+
+## Infrastructure Components
+
+* AWS EC2 for hosting
+* Linux server configuration
+* Nginx reverse proxy
+* CI/CD deployment automation
+* GitHub Actions workflow
+
+## Project Structure
+
+vastra-ecommerce-platform/
+│
+├── .github/workflows
+├── backend
+├── frontend
+└── README.md
+
+## Operational Tasks Performed
+
+* Deployment troubleshooting
+* Linux log analysis
+* Nginx configuration
+* Deployment workflow monitoring
+* Infrastructure management
+
+## Future Improvements
+
+* Kubernetes deployment
+* Monitoring dashboards
+* Auto-scaling infrastructure
+* CloudWatch integration
+* Load balancer integration
