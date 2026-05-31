@@ -51,9 +51,30 @@ Cloud-hosted e-commerce platform built using Node.js, React.js, MySQL, AWS EC2, 
 * Nginx reverse proxy
 * CI/CD deployment automation
 * GitHub Actions workflow
+
 ## Deployment Architecture
 
-User → Route53 → CloudFront → Nginx on AWS EC2 → Backend APIs → MySQL Database
+```text
+                 Users
+                   │
+                   ▼
+              Route 53
+                   │
+                   ▼
+             CloudFront
+                   │
+                   ▼
+          Nginx Reverse Proxy
+              AWS EC2
+                   │
+        ┌──────────┴──────────┐
+        ▼                     ▼
+   Backend API            Frontend
+    Node.js               React.js
+        │
+        ▼
+      MySQL
+```
 
 ### Deployment Flow
 1. Developer pushes code to GitHub
