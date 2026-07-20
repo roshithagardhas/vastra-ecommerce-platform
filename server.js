@@ -12,6 +12,7 @@ import wishlistRoutes from "./routes/wishlistRoutes.js";
 import adminRoutes from "./routes/adminRoutes.js";
 import couponRoutes from "./routes/couponRoutes.js";
 import analyticsRoutes from "./routes/analyticsRoutes.js";
+import paymentRoutes from "./routes/paymentRoutes.js";
 
 dotenv.config();
 
@@ -30,6 +31,7 @@ app.use("/api/wishlist", wishlistRoutes);
 app.use("/api/admin", adminRoutes);
 app.use("/api/coupons", couponRoutes);
 app.use("/api/analytics", analyticsRoutes);
+app.use("/api/payments", paymentRoutes);
 
 // Test route
 app.get("/", (req, res) => {
@@ -53,7 +55,7 @@ mongoose
   });
 
 // Server
-const PORT = process.env.PORT || 7001;
+const PORT = process.env.PORT || 7002;
 
 app.listen(PORT, () => {
   console.log(`🚀 Server running on http://localhost:${PORT}`);

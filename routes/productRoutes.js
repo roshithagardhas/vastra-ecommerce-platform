@@ -10,7 +10,18 @@ import {
 import protect from "../middleware/authMiddleware.js";
 import admin from "../middleware/adminMiddleware.js"; // ✅ MUST ADD THIS
 
+import upload from "../middleware/uploadMiddleware.js";
+import { uploadProductImage } from "../controllers/productController.js";
+
 const router = express.Router();
+
+router.post(
+  "/upload",
+  protect,
+  admin,
+  upload.single("image"),
+  uploadProductImage
+);
 
 // Routes
 router.get("/", getProducts);
